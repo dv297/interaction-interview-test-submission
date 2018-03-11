@@ -1,13 +1,17 @@
 .interaction-entry {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .interaction-entry-timeentry-container {
     flex: 1;
 }
 
+.interaction-entry-icon-container {
+    flex: 1;
+}
 
 .interaction-entry-card-container {
-    flex: 3;
+    flex: 5;
 }
