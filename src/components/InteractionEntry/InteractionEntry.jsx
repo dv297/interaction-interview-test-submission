@@ -2,22 +2,18 @@ import React from 'react';
 
 import './InteractionEntry.css';
 import InteractionShape from '../../proptypes/InteractionShape';
-import InteractionEvaluation from '../InteractionEvaluation/InteractionEvaluation';
+import TimeEntry from '../TimeEntry/TimeEntry';
+import InteractionEntryCard from '../InteractionEntryCard/InteractionEntryCard';
 
 const InteractionEntry = ({ interaction }) => {
   return (
     <div className="interaction-entry">
-      <h1 className="interaction-entry-title">{interaction.title}</h1>
-      {interaction.subtitle && <h2 className="interaction-entry-subtitle">{interaction.subtitle}</h2>}
-      {interaction.notes && <p className="interaction-entry-notes">{interaction.notes}</p>}
-      {interaction.evaluation && (
-        <div>
-          <hr />
-          <div className="interaction-entry-evaluation">
-            <InteractionEvaluation evaluation={interaction.evaluation} />
-          </div>
-        </div>
-      )}
+      <div className="interaction-entry-timeentry-container">
+        <TimeEntry time={interaction.time} />
+      </div>
+      <div className="interaction-entry-card-container">
+        <InteractionEntryCard interaction={interaction} />
+      </div>
     </div>
   );
 };

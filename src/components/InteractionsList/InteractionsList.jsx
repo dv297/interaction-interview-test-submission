@@ -7,8 +7,8 @@ import InteractionEntry from '../InteractionEntry/InteractionEntry';
 
 const InteractionsList = ({ interactions }) => {
   return interactions.map((interaction) => (
-    <div className="interaction-entry-container">
-      <InteractionEntry key={interaction.id} interaction={interaction} />
+    <div className="interaction-entry-container" key={interaction.id}>
+      <InteractionEntry interaction={interaction} />
     </div>
   ));
 };
