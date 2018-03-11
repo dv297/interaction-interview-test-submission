@@ -1,0 +1,14 @@
+.interaction-evaluation {
+    display: flex;
+    flex-direction: row;
+}
+
+.interaction-evaluation-text {
+    flex: 2;
+}
+
+.interaction-evaluation-score {
+    flex: 1;
+    text-align: end;
+    padding-right: 20px;
+}
